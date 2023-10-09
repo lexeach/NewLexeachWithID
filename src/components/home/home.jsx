@@ -589,6 +589,8 @@ const Dashboard = () => {
               ? "private-section-bg-light-green"
               : !exSubAdmin && udReferredUsers > 0
               ? "private-section-bg-light-yellow"
+              :  exSubAdmin && udReferredUsers < 3
+              ? "private-section-bg-light-yellow"
               : "private-section-bg-light-red"
           } `}
         >
