@@ -175,9 +175,7 @@ const Dashboard = () => {
 
       const frozenBalance_convert = web3.utils.fromWei(frozenBalance, "ether");
       setFrznBalance(roundToFour(frozenBalance_convert));
-      const udIncome_convert = web3.utils.fromWei(udIncome, "ether");
-      setudIncome(roundToFour(udIncome_convert));
-
+      
       const convert_regfee = web3.utils.fromWei(RegistrationFee, "ether");
       setRegistrationFee(convert_regfee);
 
