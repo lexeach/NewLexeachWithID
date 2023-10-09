@@ -175,6 +175,8 @@ const Dashboard = () => {
 
       const frozenBalance_convert = web3.utils.fromWei(frozenBalance, "ether");
       setFrznBalance(roundToFour(frozenBalance_convert));
+      const udIncome_convert = web3.utils.fromWei(udIncome, "ether");
+      setudIncome(roundToFour(udIncome_convert));
 
       const convert_regfee = web3.utils.fromWei(RegistrationFee, "ether");
       setRegistrationFee(convert_regfee);
@@ -674,7 +676,7 @@ const Dashboard = () => {
             <div className="card">
               <div className="card-body">
                 <h6>Income</h6>
-                <h4 className="mb-0">{udIncome ? udIncome / 1000000000000000000 : 0}</h4>
+                <h4 className="mb-0">{udIncome ? udIncome : 0}</h4>
               </div>
             </div>
           </div>
