@@ -157,7 +157,7 @@ const Dashboard = () => {
       let frozenBalance = await BEP20_.methods
         ._frozenBalance(accounts[0])
         .call();
-      let RegistrationFee = await ICU_.methods.getRegistrationFess().call();
+      let RegistrationFee = await ICU_.methods.REGESTRATION_FESS().call();
       let currentId = await ICU_.methods.currUserID().call();
       let REGESTRATION_FESS = await ICU_.methods
         .REGESTRATION_FESS()
