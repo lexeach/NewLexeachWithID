@@ -38,7 +38,7 @@ const Dashboard = () => {
   const [tkAcc, settkAcc] = useState(null);
 
   // set it latter
-  const [tokenPrice, setTokenPrice] = useState();
+  const [income, setIncome] = useState();
   const [nextReward, setNetxtReward] = useState();
   const [copySuccess, setCopySuccess] = useState(false);
 
@@ -199,7 +199,7 @@ const Dashboard = () => {
       const tokenPriceIs_convert = web3.utils.fromWei(tokenPriceIs, "ether");
       const getNextReward_convert = web3.utils.fromWei(getNextReward, "ether");
 
-      setTokenPrice(tokenPriceIs_convert);
+      setIncome(incomeIs_convert);
       setNetxtReward(roundToFour(getNextReward_convert));
     }
 
