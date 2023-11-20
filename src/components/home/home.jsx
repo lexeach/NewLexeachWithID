@@ -567,6 +567,15 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        {/* Token Price  */}
+          <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+          <div className="card">
+            <div className="card-body">
+              <h6>Token Price</h6>
+              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
+            </div>
+          </div>
+        </div>
         {exSubAdmin ? (
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
@@ -632,14 +641,14 @@ const Dashboard = () => {
             </div>
           </div>
           {/* Token Price  */}
-          {<div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+          {/* <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
               <h6>Token Price</h6>
               <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
             </div>
           </div>
-        </div>
+        </div> */}
           {/* Pay Received  */}
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
