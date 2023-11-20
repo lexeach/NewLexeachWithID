@@ -136,7 +136,7 @@ const Dashboard = () => {
       const bal = await Usdt.methods.balanceOf(accounts[0]).call()
       const usdtbal = bal/10**18
       // console.log(bal)
-      if (100<=usdtbal) {
+      if (150<=usdtbal) {
         // alert("condition is ok")
         setbalanceStatus(true);
       }
@@ -485,7 +485,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h6>Direct Income</h6>
               <h4 className="mb-0">
-                {current_tokenAccepting ? registration_Free / 4 : 0} (USDT)
+                {current_tokenAccepting ? registration_Free / 15 * 2 : 0} (USDT)
               </h4>
             </div>
           </div>
