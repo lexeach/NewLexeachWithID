@@ -165,7 +165,7 @@ const Dashboard = () => {
       let token_rewared = await ICU_.methods.tokenReward().call();
       let pay_auto_pool = await ICU_.methods.Autopool_Level_Income().call();
       let level_income = await ICU_.methods.level_income().call();
-      let tokenPriceIs = await ICU_.methods.tokenPrice().call();
+      //let tokenPriceIs = await ICU_.methods.tokenPrice().call();
       let getNextReward = await ICU_.methods.getNextReward().call();
       // console.log("level income", level_income, getNextReward, tokenPriceIs);
 
