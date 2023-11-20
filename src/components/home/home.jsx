@@ -244,7 +244,7 @@ const Dashboard = () => {
             address: "0x487C09FfecD0525e3D86E55deF2417542cFBDcC6",
             symbol: "LXC",
             decimals: 18,
-            image: "https://github.com/lexeach/NewLexeachWithID/blob/main/public/logo192.png",
+            image: "https://main.dzpg12buw8l5c.amplifyapp.com/static/media/logo.43931fe53d4b9d4bf938.png",
           },
         },
       });
