@@ -770,21 +770,6 @@ const Dashboard = () => {
       ) : (
         ""
       )}
-      {/* token Value  */}
-          <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-            <div className="card">
-              <div className="card-body">
-                <h6>Token value</h6>
-                <h4 className="mb-0">
-                  {tokenBalance ? tokenBalance / tokenPrice : 0} (USDT)
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
 
       {/* Registration section  */}
       {udIsExist ? (
