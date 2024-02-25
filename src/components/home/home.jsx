@@ -316,7 +316,7 @@ const Dashboard = () => {
     let value_ = await ICU_.methods.REGESTRATION_FESS().call();
     let tax_ = await ICU_.methods.taxRate().call();
     let EXAM_CONTREC = new web3.eth.Contract(EXAM.ABI, EXAM.address);
-    value_ = (Number(value_) + (Number(value_) * Number(tax) / 100)).toString();
+    value_ = (Number(value_) + (Number(value_) * Number(tax_) / 100)).toString();
     // console.log("resonse value", value_);
 
     let REGESTRATION_FESS = await ICU_.methods
