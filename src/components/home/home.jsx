@@ -586,7 +586,7 @@ const Dashboard = () => {
               <div className="card-body">
                 <h6>Stage Income</h6>
                 <h2 className="mb-0">
-                  {levelPrice ? levelPrice * 2 : 0} (USDT)
+                  {levelPrice ? levelPrice * 5 : 0} (USDT)
                 </h2>
               </div>
             </div>
