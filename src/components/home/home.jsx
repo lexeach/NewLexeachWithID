@@ -653,11 +653,11 @@ const Dashboard = () => {
             </div>
           </div>
         </div> */}
-          {/* Pay Received  */}
+          {/* autopoolPay Received  */}
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Pay Received</h6>
+                <h6>No. of Autopool Income</h6>
                 <h4 className="mb-0">
                   {udAutoPoolPayReceived ? udAutoPoolPayReceived : 0}
                 </h4>
@@ -668,7 +668,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>CoReferre ID</h6>
+                <h6>Partner</h6>
                 <h4 className="mb-0">{udCoreferrerID ? udCoreferrerID : 0}</h4>
               </div>
             </div>
@@ -696,7 +696,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Income Received</h6>
+                <h6>No of Level Income</h6>
                 <h4 className="mb-0">
                   {udLevelIncomeReceived ? udLevelIncomeReceived : 0}
                 </h4>
@@ -707,7 +707,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Missed Pool</h6>
+                <h6>No of Missed AutoPool</h6>
                 <h4 className="mb-0">
                   {udMissedPoolPayment ? udMissedPoolPayment : 0}
                 </h4>
@@ -718,7 +718,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Referred</h6>
+                <h6>Direct</h6>
                 <h4 className="mb-0">
                   {udReferredUsers ? udReferredUsers : 0}
                 </h4>
@@ -729,7 +729,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Referrer ID</h6>
+                <h6>Sponsor</h6>
                 <h4 className="mb-0">{udReferrerID ? udReferrerID : 0}</h4>
               </div>
             </div>
@@ -739,7 +739,7 @@ const Dashboard = () => {
               <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
                 <div className="card">
                   <div className="card-body">
-                    <h6>Stage Income</h6>
+                    <h6>No. of Stage Income</h6>
                     <h4 className="mb-0">
                       {udStageIncomeReceived ? udStageIncomeReceived : 0}
                     </h4>
@@ -749,7 +749,7 @@ const Dashboard = () => {
               <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
                 <div className="card">
                   <div className="card-body">
-                    <h6>CoReferre</h6>
+                    <h6>No. of Partner Income</h6>
                     <h4 className="mb-0">
                       {udCoreferredUsers ? udCoreferredUsers : 0}
                     </h4>
@@ -764,7 +764,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Pay Reciever</h6>
+                <h6>Autopool Pay Reciever</h6>
                 <h4 className="mb-0">
                   {udAutopoolPayReciever ? udAutopoolPayReciever : 0}
                 </h4>
