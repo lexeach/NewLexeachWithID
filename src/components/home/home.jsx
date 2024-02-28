@@ -687,8 +687,8 @@ const Dashboard = () => {
             <div className="card">
               <div className="card-body">
                 <h6>Income</h6>
-                <h4 className="mb-0">{udIncome ? udIncome.toFixed(4) : 0} USDT
-                </h4>
+                <h4 className="mb-0">{udIncome ? udIncome : 0} USDT
+                 </h4>
               </div>
             </div>
           </div>
