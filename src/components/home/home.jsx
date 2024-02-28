@@ -190,8 +190,8 @@ const Dashboard = () => {
       const convert_levelincome = web3.utils.fromWei(level_income, "ether");
       setLevelPrice(roundToFour(convert_levelincome));
 
-      const income_convert = web3.utils.fromWei(income, "ether");
-      setUdIncome (roundToFour(income_convert));
+      const udIncome_convert = web3.utils.fromWei(income, "ether");
+      setUdIncome (roundToFour(udIncome_convert));
 
       
       // token balance
