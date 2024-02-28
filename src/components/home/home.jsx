@@ -163,7 +163,6 @@ const Dashboard = () => {
         .REGESTRATION_FESS()
         .call();
       let token_rewared = await ICU_.methods.tokenReward().call();
-      let income = await ICU_.methods.income().call();
       let pay_auto_pool = await ICU_.methods.Autopool_Level_Income().call();
       let level_income = await ICU_.methods.level_income().call();
       let tokenPriceIs = await ICU_.methods.tokenPrice().call();
@@ -190,10 +189,6 @@ const Dashboard = () => {
       const convert_levelincome = web3.utils.fromWei(level_income, "ether");
       setLevelPrice(roundToFour(convert_levelincome));
 
-      const udIncome_convert = web3.utils.fromWei(income, "ether");
-      setUdIncome (roundToFour(udIncome_convert));
-
-      
       // token balance
       let token_balance = await BEP20_.methods.balanceOf(accounts[0]).call();
 
