@@ -690,7 +690,7 @@ const Dashboard = () => {
               <div className="card-body">
                 <h6>Income</h6>
                <h4 className="mb-0">
-                  {udIncome ? parseFloat(udIncome).toFixed(4) : 0} USDT
+                  {udIncome ? parseFloat(udIncome).toFixed(4).replace(/\.?0+$/, '') : 0} USDT
                  </h4>
               </div>
             </div>
