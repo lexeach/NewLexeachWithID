@@ -684,17 +684,17 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          {/* Income  */}
-          <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-            <div className="card">
-              <div className="card-body">
-                <h6>Income</h6>
-               <h4 className="mb-0">
-                  {udIncome ? parseFloat(udIncome).toFixed(4).replace(/\.?0+$/, '') : 0} USDT
-                 </h4>
-              </div>
-            </div>
-          </div>
+          {/* Income in Ether */}
+<div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+  <div className="card">
+    <div className="card-body">
+      <h6>Income (Ether)</h6>
+      <h4 className="mb-0">
+        {udIncome ? (parseFloat(udIncome) * exchangeRate).toFixed(4).replace(/\.?0+$/, '') : 0} Ether
+      </h4>
+    </div>
+  </div>
+</div>
           {/* Income Received  */}
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
