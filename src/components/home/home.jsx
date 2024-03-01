@@ -330,7 +330,7 @@ const Dashboard = () => {
     const { referredUsers, coreferrerID } = ref_user_detail;
 
     let subAdmin = await EXAM_CONTREC.methods.isPass(ref_user_acc).call();
-    if ( id = 1 ) {
+    if ( id == 1 ) {
         coRefId = id; 
     } else {
       if (subAdmin && parseInt(referredUsers) > 2) {
