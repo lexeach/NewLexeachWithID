@@ -330,12 +330,16 @@ const Dashboard = () => {
     const { referredUsers, coreferrerID } = ref_user_detail;
 
     let subAdmin = await EXAM_CONTREC.methods.isPass(ref_user_acc).call();
-    // console.log("sub admin", subAdmin);
-    if (subAdmin && parseInt(referredUsers) > 2) {
-    coRefId = id === 1 ? 1 : id;  // Update coRefId to 1 if id is 1, otherwise use id
+    if ( id = 1 ) {
+        coRefId = id; 
     } else {
-    coRefId = coreferrerID;
+      if (subAdmin && parseInt(referredUsers) > 2) {
+      coRefId = id;
+    } else {
+      coRefId = coreferrerID;
     }
+    }
+    
 
     // console.log("the approve REGESTRATION_FESS", REGESTRATION_FESS);
     // the approve REGESTRATION_FESS ERC20-Token-Accepting
