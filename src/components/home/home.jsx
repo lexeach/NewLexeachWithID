@@ -333,9 +333,6 @@ const Dashboard = () => {
     // console.log("sub admin", subAdmin);
     if (subAdmin && parseInt(referredUsers) > 2) {
       coRefId = id;
-    }
-    if (id =1) {
-      coRefId = 1;
     } else {
       coRefId = coreferrerID;
     }
