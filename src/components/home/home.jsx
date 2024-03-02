@@ -684,16 +684,15 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          {/* Income  */}
-          <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-            <div className="card">
-              <div className="card-body">
-                <h6>Income</h6>
-                <h4 className="mb-0">{udIncome ? udIncome : 0} USDT
-                 </h4>
-              </div>
-            </div>
-          </div>
+          {/* Income */}
+<div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+  <div className="card">
+    <div className="card-body">
+      <h6>Income</h6>
+      <h4 className="mb-0">{udIncome ? weiToEther(udIncome) : 0} Ether</h4>
+    </div>
+  </div>
+</div>
           {/* Income Received  */}
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
