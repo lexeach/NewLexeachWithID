@@ -693,7 +693,7 @@ const Dashboard = () => {
   <div className="card">
     <div className="card-body">
       <h6>Income</h6>
-      <h4 className="mb-0">{udIncome ? weiToEther(udIncome) : 0} Ether</h4>
+      <h4 className="mb-0">{udIncome ? weiToEther(udIncome) : 0} USDT</h4>
     </div>
   </div>
 </div>
