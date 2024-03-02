@@ -493,9 +493,9 @@ const Dashboard = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Direct Income</h6>
+              <h6>Per referral income</h6>
               <h4 className="mb-0">
-                {current_tokenAccepting ? registration_Free / 15 * 2 : 0} (USDT)
+                {current_tokenAccepting ? registration_Free / 15 * 2 : 0} USDT
               </h4>
             </div>
           </div>
@@ -504,9 +504,9 @@ const Dashboard = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Token reward</h6>
+              <h6>Token reward (Last)</h6>
               <h4 className="mb-0">
-                {tokenRewarded ? tokenRewarded : 0} (LXC)
+                {tokenRewarded ? tokenRewarded : 0} LXC
               </h4>
             </div>
           </div>
@@ -515,8 +515,9 @@ const Dashboard = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Next Reward</h6>
-              <h4 className="mb-0">{nextReward ? nextReward : 0} (LXC)</h4>
+              <h6>Token reward (Next)</h6>
+              <h4 className="mb-0">{nextReward ? nextReward : 0} LXC
+              </h4>
             </div>
           </div>
         </div>
@@ -533,7 +534,7 @@ const Dashboard = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Sub Admin </h6>
+              <h6>Associate Partner </h6>
               <h4 className="mb-0">{exSubAdmin ? "YES" : "NO"}</h4>
             </div>
           </div>
@@ -543,7 +544,7 @@ const Dashboard = () => {
           <div className="card">
             <div className="card-body">
               <h6>Autopool Income</h6>
-              <h2 className="mb-0">{payAutoPool ? payAutoPool : 0} (USDT)</h2>
+              <h2 className="mb-0">{payAutoPool ? payAutoPool : 0} USDT</h2>
             </div>
           </div>
         </div>
@@ -552,7 +553,7 @@ const Dashboard = () => {
           <div className="card">
             <div className="card-body">
               <h6>Level Income</h6>
-              <h2 className="mb-0">{levelPrice ? levelPrice : 0} (USDT)</h2>
+              <h2 className="mb-0">{levelPrice ? levelPrice : 0} USDT</h2>
             </div>
           </div>
         </div>
@@ -582,7 +583,7 @@ const Dashboard = () => {
           <div className="card">
             <div className="card-body">
               <h6>Token Price</h6>
-              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
+              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} USDT/LXC</h4>
             </div>
           </div>
         </div>
@@ -592,7 +593,7 @@ const Dashboard = () => {
               <div className="card-body">
                 <h6>Stage Income</h6>
                 <h2 className="mb-0">
-                  {levelPrice ? levelPrice * 5 : 0} (USDT)
+                  {levelPrice ? levelPrice * 5 : 0} USDT
                 </h2>
               </div>
             </div>
@@ -626,7 +627,7 @@ const Dashboard = () => {
             <div className="card">
               <div className="card-body">
                 <h6>Frozen Balance </h6>
-                <h4 className="mb-0">{frznBalance ? frznBalance : 0} (LXC)</h4>
+                <h4 className="mb-0">{frznBalance ? frznBalance : 0} LXC</h4>
               </div>
             </div>
           </div>
@@ -636,7 +637,7 @@ const Dashboard = () => {
               <div className="card-body">
                 <h6>Token Balance</h6>
                 <h4 className="mb-0">
-                  {tokenBalance ? tokenBalance : 0} (LXC)
+                  {tokenBalance ? tokenBalance : 0} LXC
                 </h4>
               </div>
             </div>
@@ -655,7 +656,7 @@ const Dashboard = () => {
           <div className="card">
             <div className="card-body">
               <h6>Token Price</h6>
-              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
+              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} USDT/LXC</h4>
             </div>
           </div>
         </div> */}
