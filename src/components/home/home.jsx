@@ -14,6 +14,10 @@ import { ICU, BEP20, USDT, EXAM } from "../../utils/web3.js";
 
 const Dashboard = () => {
   const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
+  const weiToEther = (wei) => {
+  return web3.utils.fromWei(wei, 'ether');
+};
+
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [account, setAccount] = useState();
