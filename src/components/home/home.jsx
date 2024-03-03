@@ -87,6 +87,7 @@ const Dashboard = () => {
       setExSubAdmin(subAdmin);
 
       let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
+      let partnerID = await ICU_.methods.partnerID(account[0]).call();
       let userDetail = await ICU_.methods.users(account[0]).call();
       let {
         autoPoolPayReceived,
@@ -337,7 +338,7 @@ const Dashboard = () => {
     if ( id == 1 ) {
         coRefId = id; 
     } else {
-      if (subAdmin && parseInt(referredUsers) > 2) {
+      if (parseInt(partnerID) > 0 && parseInt(referredUsers) > 2) {
       coRefId = id;
     } else {
       coRefId = coreferrerID;
