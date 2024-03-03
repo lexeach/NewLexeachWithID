@@ -73,7 +73,8 @@ const Dashboard = () => {
   const [udLevelIncomeReceived, setUdLevelIncomeReceived] = useState();
   const [udMissedPoolPayment, setUdMmissedPoolPayment] = useState();
   const [udReferredUsers, setUdReferredUsers] = useState();
-  const [udReferrerID, setUdReferrerID] = useState();
+   const [udPartnerID, setUdReferredUsers] = useState();
+  const [udReferrerID, setudPartnerID] = useState();
   const [udStageIncomeReceived, setUdStageIncomeReceived] = useState();
   const [exSubAdmin, setExSubAdmin] = useState();
 
@@ -88,6 +89,7 @@ const Dashboard = () => {
 
       let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
       let partnerID = await ICU_.methods.partnerID(account[0]).call();
+      setudPartnerID(partnerID);
       let userDetail = await ICU_.methods.users(account[0]).call();
       let {
         autoPoolPayReceived,
