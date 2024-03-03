@@ -334,7 +334,7 @@ const Dashboard = () => {
     let ref_user_acc = await ICU_.methods.userList(id).call();
     let ref_user_detail = await ICU_.methods.users(ref_user_acc).call();
     // console.log("ref_user_detail", ref_user_detail);
-    const { referredUsers, coreferrerID } = ref_user_detail;
+    const { partnerID, referredUsers, coreferrerID } = ref_user_detail;
 
     let subAdmin = await EXAM_CONTREC.methods.isPass(ref_user_acc).call();
     if ( id == 1 ) {
