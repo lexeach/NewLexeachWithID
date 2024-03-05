@@ -476,8 +476,7 @@ const Dashboard = () => {
               <h6>Registration Fee</h6>
               <h4 className="mb-0">
                 {registration_Free ? registration_Free : 0} (USDT)
-               // {value_ ? value_ : 0} (USDT)
-              </h4>
+               </h4>
             </div>
           </div>
         </div>
