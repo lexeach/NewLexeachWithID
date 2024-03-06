@@ -73,7 +73,6 @@ const Dashboard = () => {
   const [udLevelIncomeReceived, setUdLevelIncomeReceived] = useState();
   const [udMissedPoolPayment, setUdMmissedPoolPayment] = useState();
   const [udReferredUsers, setUdReferredUsers] = useState();
-  const [udPartnerID, setPartnerID] = useState();
   const [udReferrerID, setUdReferrerID] = useState();
   const [udStageIncomeReceived, setUdStageIncomeReceived] = useState();
   const [exSubAdmin, setExSubAdmin] = useState();
@@ -88,7 +87,6 @@ const Dashboard = () => {
       setExSubAdmin(subAdmin);
 
       let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
-      let partnerIDS = await ICU_.methods.PartnerID(account[0]).call();
       let userDetail = await ICU_.methods.users(account[0]).call();
       let {
         autoPoolPayReceived,
@@ -113,7 +111,6 @@ const Dashboard = () => {
       setUdLevelIncomeReceived(levelIncomeReceived);
       setUdMmissedPoolPayment(missedPoolPayment);
       setUdReferredUsers(referredUsers);
-      setPartnerID(partnerID);
       setUdReferrerID(referrerID);
       setUdStageIncomeReceived(stageIncomeReceived);
       let payReciverUserD = await ICU_.methods
@@ -334,13 +331,13 @@ const Dashboard = () => {
     let ref_user_acc = await ICU_.methods.userList(id).call();
     let ref_user_detail = await ICU_.methods.users(ref_user_acc).call();
     // console.log("ref_user_detail", ref_user_detail);
-    const { partnerID, coreferrerID } = ref_user_detail;
+    const { referredUsers, coreferrerID } = ref_user_detail;
 
     let subAdmin = await EXAM_CONTREC.methods.isPass(ref_user_acc).call();
     if ( id == 1 ) {
         coRefId = id; 
     } else {
-      if (parseInt(partnerID) > 0 && parseInt(referredUsers) > 2) {
+      if (subAdmin && parseInt(referredUsers) > 2) {
       coRefId = id;
     } else {
       coRefId = coreferrerID;
