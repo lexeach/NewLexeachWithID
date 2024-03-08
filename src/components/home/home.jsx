@@ -470,19 +470,31 @@ const Dashboard = () => {
           </div>
         </div>
 
-                 {/* Registration Amount */}
+                {/* Registration Amount */}
 <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
   <div className="card">
     <div className="card-body">
       <h5>Registration Amount</h5>
       <h4 className="mb-0">
-        {registration_Free  && taxRate
-          ? (parseFloat(registration_Free) * (1 + parseFloat(tax_ ) / 100)).toFixed(2)
-          : 0} USDT
+        {registration_Free && taxRate
+          ? (() => {
+              console.log("registration_Free:", registration_Free);
+              console.log("taxRate:", taxRate);
+
+              const calculatedAmount = (
+                parseFloat(registration_Free) * (1 + parseFloat(taxRate) / 100)
+              ).toFixed(2);
+
+              console.log("calculatedAmount:", calculatedAmount);
+
+              return calculatedAmount;
+            })()
+          : "N/A"}
       </h4>
     </div>
   </div>
 </div>
+
  
         {/* reg fee 1 */}
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
