@@ -24,7 +24,6 @@ const Dashboard = () => {
   const [balance, setBalance] = useState();
   const [frznBalance, setFrznBalance] = useState();
   const [registration_Free, setRegistrationFee] = useState();
-  const [taxRates, settaxRates] = useState();
   const [tokenBalance, setTokenBalance] = useState();
   const [current_id, setCurrentId] = useState();
   const [current_tokenAccepting, setREGESTRATION_FESS] = useState();
@@ -163,7 +162,6 @@ const Dashboard = () => {
         ._frozenBalance(accounts[0])
         .call();
       let RegistrationFee = await ICU_.methods.REGESTRATION_FESS().call();
-      let TaxRate = await ICU_.methods.taxRate().call();
       let currentId = await ICU_.methods.currUserID().call();
       let REGESTRATION_FESS = await ICU_.methods
         .REGESTRATION_FESS()
@@ -184,8 +182,6 @@ const Dashboard = () => {
       
       const convert_regfee = web3.utils.fromWei(RegistrationFee, "ether");
       setRegistrationFee(convert_regfee);
-      const convert_taxrate = web3.utils.fromWei(TaxRate, "ether");
-      setRegistrationFee(convert_taxrate);
 
       setCurrentId(currentId);
       setREGESTRATION_FESS(REGESTRATION_FESS);
@@ -473,22 +469,6 @@ const Dashboard = () => {
             <div className="card-body text-center">Public Value</div>
           </div>
         </div>
-
-               {/* Registration Amount */}
-<div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
-  <div className="card">
-    <div className="card-body">
-      <h5>Registration Amount</h5>
-      <h4 className="mb-0">
-        {registration_Free && taxRates
-          ? (parseFloat(registration_Free) * (1 + parseFloat(taxRates) / 100)).toFixed(2)
-          : 0} USDT
-      </h4>
-    </div>
-  </div>
-</div>
-
- 
         {/* reg fee 1 */}
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
