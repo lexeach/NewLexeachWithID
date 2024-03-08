@@ -186,7 +186,7 @@ const Dashboard = () => {
       setRegistrationFee(convert_regfee);
 
       const convert_taxrate = web3.utils.fromWei(TaxRate, "ether");
-      setTaxRate(convert_taxrate);
+      setTaxRate(TaxRate);
 
       setCurrentId(currentId);
       setREGESTRATION_FESS(REGESTRATION_FESS);
