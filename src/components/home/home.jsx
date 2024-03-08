@@ -163,7 +163,7 @@ const Dashboard = () => {
         ._frozenBalance(accounts[0])
         .call();
       let RegistrationFee = await ICU_.methods.REGESTRATION_FESS().call();
-      let tax_ = await ICU_.methods.taxRate().call();
+      let TaxRate = await ICU_.methods.taxRate().call();
       let currentId = await ICU_.methods.currUserID().call();
       let REGESTRATION_FESS = await ICU_.methods
         .REGESTRATION_FESS()
@@ -185,7 +185,7 @@ const Dashboard = () => {
       const convert_regfee = web3.utils.fromWei(RegistrationFee, "ether");
       setRegistrationFee(convert_regfee);
 
-      const convert_taxrate = web3.utils.fromWei(tax_, "ether");
+      const convert_taxrate = web3.utils.fromWei(TaxRate, "ether");
       setTaxRate(convert_taxrate);
 
       setCurrentId(currentId);
