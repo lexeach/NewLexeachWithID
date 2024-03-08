@@ -474,19 +474,22 @@ const Dashboard = () => {
             <div className="card-body text-center">Public Value</div>
           </div>
         </div>
-       {/* reg fee 1 */}
-     <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-        <div className="card">
-           <div className="card-body">
-            <h5>Registration Fee</h5>
-            <h4 className="mb-0">
-              let TaxRate = await ICU_.methods.taxRate().call();
-            {registration_Free && TaxRate
-          ? (parseFloat(registration_Free) * (1 + parseFloat(TaxRate) / 100)).toFixed(2)
-          : 0} USDT</h4>
-             </div>
-           </div>
-         </div>
+       {/* Registration Fee 1 */}
+<div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+  <div className="card">
+    <div className="card-body">
+      <h5>Registration Fee</h5>
+      <h4 className="mb-0">
+        {async () => {
+          let TaxRate = await ICU_.methods.taxRate().call();
+          return registration_Free && TaxRate
+            ? (parseFloat(registration_Free) * (1 + parseFloat(TaxRate) / 100)).toFixed(2)
+            : 0;
+        }} USDT
+      </h4>
+    </div>
+  </div>
+</div>
 
         {/* Current ID 2 */}
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
