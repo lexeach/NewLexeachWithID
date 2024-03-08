@@ -480,8 +480,9 @@ const Dashboard = () => {
            <div className="card-body">
             <h5>Registration Fee</h5>
             <h4 className="mb-0">
-            {registration_Free && tax_Rate
-          ? (parseFloat(registration_Free) * (1 + parseFloat(tax_Rate) / 100)).toFixed(2)
+              let TaxRate = await ICU_.methods.taxRate().call();
+            {registration_Free && TaxRate
+          ? (parseFloat(registration_Free) * (1 + parseFloat(TaxRate) / 100)).toFixed(2)
           : 0} USDT</h4>
              </div>
            </div>
