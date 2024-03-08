@@ -476,13 +476,14 @@ const Dashboard = () => {
     <div className="card-body">
       <h5>Registration Amount</h5>
       <h4 className="mb-0">
-        {registration_Free && taxRate
+        let tax_ = await ICU_.methods.taxRate().call();
+        {registration_Free && tax_
           ? (() => {
               console.log("registration_Free:", registration_Free);
-              console.log("taxRate:", taxRate);
+              console.log("tax_:", tax_);
 
               const calculatedAmount = (
-                parseFloat(registration_Free) * (1 + parseFloat(taxRate) / 100)
+                parseFloat(registration_Free) * (1 + parseFloat(tax_) / 100)
               ).toFixed(2);
 
               console.log("calculatedAmount:", calculatedAmount);
