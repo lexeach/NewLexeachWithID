@@ -475,10 +475,7 @@ const Dashboard = () => {
     <div className="card-body">
       <h5>Registration Fee</h5>
       <h4 className="mb-0">
-        {registration_Free
-          ? (parseFloat(registration_Free) * 1.3).toFixed(2)
-          : 0} USDT
-      </h4>
+        {registration_Free ? (parseFloat(registration_Free) * 1.3): 0} USDT</h4>
     </div>
   </div>
 </div>
