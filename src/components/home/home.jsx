@@ -469,17 +469,20 @@ const Dashboard = () => {
             <div className="card-body text-center">Public Value</div>
           </div>
         </div>
-        {/* reg fee 1 */}
-        <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-          <div className="card">
-            <div className="card-body">
-              <h6>Registration Fee</h6>
-              <h4 className="mb-0">
-                {registration_Free ? registration_Free : 0} (USDT)
-               </h4>
-            </div>
-          </div>
-        </div>
+       {/* Registration Fee */}
+<div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
+  <div className="card">
+    <div className="card-body">
+      <h5>Registration Fee</h5>
+      <h4 className="mb-0">
+        {registration_Free
+          ? (parseFloat(registration_Free) * 1.3).toFixed(2)
+          : 0} USDT
+      </h4>
+    </div>
+  </div>
+</div>
+
         {/* Current ID 2 */}
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
