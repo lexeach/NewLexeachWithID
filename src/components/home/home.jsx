@@ -477,7 +477,7 @@ const Dashboard = () => {
       <h5>Registration Amount</h5>
       <h4 className="mb-0">
         {registration_Free  && taxRate
-          ? (parseFloat(registration_Free) * (1 + parseFloat(taxRate) / 100)).toFixed(2)
+          ? (parseFloat(registration_Free) * (1 + parseFloat(tax_ ) / 100)).toFixed(2)
           : 0} USDT
       </h4>
     </div>
