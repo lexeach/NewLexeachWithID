@@ -163,7 +163,7 @@ const Dashboard = () => {
         ._frozenBalance(accounts[0])
         .call();
       let RegistrationFee = await ICU_.methods.REGESTRATION_FESS().call();
-      let TaxRate = await ICU_.methods.taxRate().call();
+      let tax_ = await ICU_.methods.taxRate().call();
       let currentId = await ICU_.methods.currUserID().call();
       let REGESTRATION_FESS = await ICU_.methods
         .REGESTRATION_FESS()
@@ -185,7 +185,7 @@ const Dashboard = () => {
       const convert_regfee = web3.utils.fromWei(RegistrationFee, "ether");
       setRegistrationFee(convert_regfee);
 
-      const convert_taxrate = web3.utils.fromWei(TaxRate, "ether");
+      const convert_taxrate = web3.utils.fromWei(tax_, "ether");
       setTaxRate(convert_taxrate);
 
       setCurrentId(currentId);
@@ -480,7 +480,7 @@ const Dashboard = () => {
            <div className="card-body">
             <h5>Registration Fee</h5>
             <h4 className="mb-0">
-            {registration_Free && taxRate
+            {registration_Free && tax_Rate
           ? ((parseFloat(registration_Free) + parseFloat(tax_Rate)) * (1 + parseFloat(tax_Rate) / 100)).toFixed(2)
           : 0} USDT</h4>
              </div>
