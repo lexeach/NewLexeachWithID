@@ -145,7 +145,7 @@ const Dashboard = () => {
       let tax_ = await ICU_.methods.taxRate().call();
 
       value_ = Number(value_) + (Number(value_) * Number(tax_) / 100);
-      const require_ = value_ / 10**18;
+      require_ = value_ / 10**18;
 
       if (require_ <= usdtbal) {
        // alert("condition is ok")
