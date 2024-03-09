@@ -591,8 +591,10 @@ const Dashboard = () => {
   <div className="card">
     <div className="card-body">
       <h6>Token Price</h6>
-      <h4 className="mb-0">{tokenPrice ? `${tokenPrice.toFixed(6)} USDT/LXC` : '0 USDT/LXC'}</h4>
-    </div>
+      <h4 className="mb-0">{tokenPrice
+      ? (parseFloat(tokenPrice)).toFixed(7)
+          : 0} USDT</h4>
+      </div>
   </div>
 </div>
         {exSubAdmin ? (
