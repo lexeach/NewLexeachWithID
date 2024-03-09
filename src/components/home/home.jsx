@@ -591,12 +591,13 @@ const Dashboard = () => {
   <div className="card">
     <div className="card-body">
       <h6>Token Price</h6>
-      <h4 className="mb-0">{tokenPrice !== undefined && tokenPrice !== null
-        ? (Number(tokenPrice).toFixed(7))
+      <h4 className="mb-0">{typeof tokenPrice === 'number'
+        ? parseFloat(tokenPrice).toFixed(7)
         : 'Invalid Token Price'} USDT</h4>
     </div>
   </div>
 </div>
+
 
         {exSubAdmin ? (
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
