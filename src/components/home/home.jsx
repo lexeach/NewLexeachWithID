@@ -141,11 +141,10 @@ const Dashboard = () => {
       const bal = await Usdt.methods.balanceOf(accounts[0]).call()
       const usdtbal = bal/10**18
       // console.log(bal)
-      
-      if (195 <= usdtbal) {
-       // alert("condition is ok")
-      setbalanceStatus(true);
-       }
+      if (195<=usdtbal) {
+        // alert("condition is ok")
+        setbalanceStatus(true);
+      }
 
       if (networkId === 97) {
         setnetworkStatus(true);
@@ -586,19 +585,15 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-       {/* Token Price */}
-<div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-  <div className="card">
-    <div className="card-body">
-      <h6>Token Price</h6>
-      <h4 className="mb-0">{typeof tokenPrice === 'number'
-        ? parseFloat(tokenPrice).toFixed(7)
-        : 'Invalid Token Price'} USDT</h4>
-    </div>
-  </div>
-</div>
-
-
+        {/* Token Price  */}
+          <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+          <div className="card">
+            <div className="card-body">
+              <h6>Token Price</h6>
+              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} USDT/LXC</h4>
+            </div>
+          </div>
+        </div>
         {exSubAdmin ? (
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
