@@ -141,14 +141,8 @@ const Dashboard = () => {
       const bal = await Usdt.methods.balanceOf(accounts[0]).call()
       const usdtbal = bal/10**18
       // console.log(bal)
-      let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
-      let value_ = await ICU_.methods.REGESTRATION_FESS().call();
-      let tax_ = await ICU_.methods.taxRate().call();
-
-      value_ = Number(value_) + (Number(value_) * Number(tax_) / 100).toString();
-      const require_ = value_ / 10**18;
-
-      if (require_ <= usdtbal) {
+      
+      if (150 <= usdtbal) {
        // alert("condition is ok")
       setbalanceStatus(true);
        }
@@ -597,7 +591,7 @@ const Dashboard = () => {
           <div className="card">
             <div className="card-body">
               <h6>Token Price</h6>
-              <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} USDT/LXC</h4>
+              <h4 className="mb-0">{tokenPrice ? (tokenPrice).toFixed(6) : 0} USDT/LXC</h4>
             </div>
           </div>
         </div>
