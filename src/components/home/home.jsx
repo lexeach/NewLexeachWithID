@@ -144,7 +144,7 @@ const Dashboard = () => {
       let value_ = await ICU_.methods.REGESTRATION_FESS().call();
       let tax_ = await ICU_.methods.taxRate().call();
 
-      value_ = Number(value_) + (Number(value_) * Number(tax_) / 100).string;
+      value_ = Number(value_) + (Number(value_) * Number(tax_) / 100).toString();
       const require_ = value_ / 10**18;
 
       if (require_ <= usdtbal) {
