@@ -142,7 +142,7 @@ const Dashboard = () => {
       const usdtbal = bal/10**18
       // console.log(bal)
       
-      if (150 <= usdtbal) {
+      if (195 <= usdtbal) {
        // alert("condition is ok")
       setbalanceStatus(true);
        }
@@ -586,15 +586,15 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        {/* Token Price  */}
-          <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
-          <div className="card">
-            <div className="card-body">
-              <h6>Token Price</h6>
-              <h4 className="mb-0">{tokenPrice ? (tokenPrice).toFixed(6) : 0} USDT/LXC</h4>
-            </div>
-          </div>
-        </div>
+        {/* Token Price */}
+<div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
+  <div className="card">
+    <div className="card-body">
+      <h6>Token Price</h6>
+      <h4 className="mb-0">{tokenPrice ? `${tokenPrice.toFixed(6)} USDT/LXC` : '0 USDT/LXC'}</h4>
+    </div>
+  </div>
+</div>
         {exSubAdmin ? (
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
