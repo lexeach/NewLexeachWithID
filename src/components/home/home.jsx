@@ -144,8 +144,8 @@ const Dashboard = () => {
       let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
     let value_ = await ICU_.methods.REGESTRATION_FESS().call();
     let tax_ = await ICU_.methods.taxRate().call();
-    let EXAM_CONTREC = new web3.eth.Contract(EXAM.ABI, EXAM.address);
-    value_ = (Number(value_) + (Number(value_) * Number(tax_) / 100)).toString();
+   
+    value_ = (Number(value_) + (Number(value_) * Number(tax_) / 100));
       const requir = value_/10**18;
       if (requir<=usdtbal) {
         // alert("condition is ok")
