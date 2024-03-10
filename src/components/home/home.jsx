@@ -511,7 +511,7 @@ const Dashboard = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Token reward (Last)</h6>
+              <h6>LXC reward (Last)</h6>
               <h4 className="mb-0">
                 {tokenRewarded ? tokenRewarded : 0} LXC
               </h4>
@@ -522,7 +522,7 @@ const Dashboard = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Token reward (Next)</h6>
+              <h6>LXC reward (Next)</h6>
               <h4 className="mb-0">{nextReward ? nextReward : 0} LXC
               </h4>
             </div>
@@ -589,7 +589,7 @@ const Dashboard = () => {
 <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
   <div className="card">
     <div className="card-body">
-      <h6>Token Price</h6>
+      <h6>LXC Price</h6>
       <h4 className="mb-0">{tokenPrice
       ? (parseFloat(tokenPrice)).toFixed(7)
           : 0} USDT</h4>
@@ -635,7 +635,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Frozen Balance </h6>
+                <h6>Frozen LXC </h6>
                 <h4 className="mb-0">{frznBalance ? frznBalance : 0} LXC</h4>
               </div>
             </div>
@@ -644,7 +644,7 @@ const Dashboard = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
             <div className="card">
               <div className="card-body">
-                <h6>Token Balance</h6>
+                <h6>LXC Balance</h6>
                 <h4 className="mb-0">
                   {tokenBalance ? tokenBalance : 0} LXC
                 </h4>
@@ -664,7 +664,7 @@ const Dashboard = () => {
           {/* <div className="col-lg-3 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h6>Token Price</h6>
+              <h6>LXC Price</h6>
               <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} USDT/LXC</h4>
             </div>
           </div>
