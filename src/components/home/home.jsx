@@ -140,8 +140,14 @@ const Dashboard = () => {
       let Usdt = new web3.eth.Contract(USDT.ABI,USDT.address);
       const bal = await Usdt.methods.balanceOf(accounts[0]).call()
       const usdtbal = bal/10**18
-      
-      if (195 <= usdtbal) {
+      let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
+    let value_ = await ICU_.methods.REGESTRATION_FESS().call();
+    let tax_ = await ICU_.methods.taxRate().call();
+    let EXAM_CONTREC = new web3.eth.Contract(EXAM.ABI, EXAM.address);
+    value_ = (Number(value_) + (Number(value_) * Number(tax_) / 100)).toString();
+    console.log("resonse value", value_);
+      const require = value / 10**18;
+      if (require <= usdtbal) {
        // alert("condition is ok")
        setbalanceStatus(true);
       }
