@@ -140,10 +140,7 @@ const Dashboard = () => {
       let Usdt = new web3.eth.Contract(USDT.ABI,USDT.address);
       const bal = await Usdt.methods.balanceOf(accounts[0]).call()
       const usdtbal = bal/10**18
-      value_ = (parseFloat(registration_Free) * (1 + parseFloat(tax_Rate) / 100));
-    //console.log("resonse value", value_);
-      const require = value_ / 10**18;
-      if (require <= usdtbal) {
+      if (195 <= usdtbal) {
        // alert("condition is ok")
        setbalanceStatus(true);
       }
